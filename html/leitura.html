@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispositivo rodando</title>
+    <style>
+        html {
+            font-family: Arial;
+            display: inline-block;
+            margin: 0px auto;
+            text-align: center;
+        }
+        h1 {
+            color: #0F3376;
+            padding: 2vh;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+        .button {
+            display: inline-block;
+            background-color: #008CBA;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            padding: 16px 40px;
+            text-decoration: none;
+            font-size: 30px;
+            margin: 2px;
+            cursor: pointer;
+        }
+        .button2 {
+            background-color: #f44336;
+        }
+        .units {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dispositivo funcionando</h1>
+
+    <p>
+        <div>Umidade</div>
+        <div id="umidade"></div>
+    </p>
+
+    <p>
+        <div>Altura</div>
+        <div id="altura"></div>
+    </p>
+
+    <a href="../index.html">Voltar para a pagina inicial</a>
+
+    <script>
+        let url = "http://192.168.43.30"
+        let leitura_altura = 0;
+        let leitura_umidade = 0;
+
+
+        setInterval(function ( ) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {	
+                    leitura_altura = this.responseText;
+                    document.getElementById('altura').innerText = `${leitura_altura}`;
+                }
+            };
+            xhttp.open("GET", url+"/altura", true);    
+            xhttp.send();
+        }, 2000);
+
+        setInterval(function ( ) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {	
+                leitura_umidade = this.responseText;
+                document.getElementById('umidade').innerText = `${leitura_umidade}`;
+                }
+            };
+            xhttp.open("GET", url+"/umidade", true);    
+            xhttp.send();
+        }, 2000);
+
+    </script>
+</body>
+</html>

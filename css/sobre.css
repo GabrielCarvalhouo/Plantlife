@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --white: #fff;
+    --whitesmoke: #f9f9f9;
+    --light-grey: #ececec;
+    --grey: #c4c4c4;
+    --medium-grey: #a7a7a7;
+    --deep-grey: #1d1d1d;
+    --black: #000;
+    --blue: rgb(33, 33, 94);
+}
+
+body{
+    margin: 25px;
+    background-image: linear-gradient( to right, rgb(107, 192, 241) 30%, rgb(146, 243, 146));
+}
+
+.container{
+    background-color: rgb(107, 192, 241);
+    color: #ececec;
+    box-shadow: 2px 2px 10px 10px rgba(0, 0, 0, 0.507);
+    border-radius: 7px;
+    margin: auto;
+    padding: 15px;
+    width: 50%;
+    height: 50%; 
+}
+
+.about {
+    margin: 0 10px;
+    margin-bottom: 20px;
+}
+
+.about h1 {
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.about p {
+    font-size: 20px;
+}
+
+.members {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.members p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+.members ul {
+    font-size: 25px;
+    padding-top: 50px;
+    margin-left: -200px;
+    list-style-type: none;
+}
+
+.links {
+    font-size: 15px;
+}
+
+.links a {
+    background-color: #ececec;
+    color: rgb(107, 192, 241);
+    padding: 5px;
+    border: #ececec solid 2px;
+    border-radius: 5px;
+}
+
+.links a:hover {
+    background-color: rgb(236, 236, 236, 0.5);;
+    color: rgb(107, 192, 241);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant-life - perfil do usuário</title>
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+<body onload="PerfilInfo()">
+    <div class="box_perfil">
+        <div id="#perfil">
+            <h1 id="userName">Perfil de visitante</h1>
+        </div>
+        <div class="links">
+            <a href="./sobre.html">Sobre Nós</a>
+            <a href="cadastroPlantas.html">Cadastro de plantas</a>
+            <a href="html/leitura.html">Leitura das Plantas</a>
+            <a onclick="Logout()" href="./../index.html">Logout</a>
+            <a onclick="ExcluirConta()" href="./../index.html">Excluir conta</a>
+
+        </div>
+    </div>
+    <div class="container">
+    <div class="conteudo_lista">
+<div class="box">
+<div id="ListaDePlantas">
+    <div class="fundo_lista">
+        <h2>Plantas cadastradas</h2>
+        <p id="plantasLista"></p>
+    </div>
+    <div id="buttons_lista">
+        <div id="botoes">
+        <button  class="button_cadastro" onclick="EditarPlanta()">Editar uma planta</button>
+        <button  class="button_cadastro" onclick="ExcluirPlanta()">Excluir uma planta</button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+    <script src="../js/script.js"></script>
+</body>
+</html>

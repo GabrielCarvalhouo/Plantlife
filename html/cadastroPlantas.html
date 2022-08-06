@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre sua plantinha</title>
+    <link rel="stylesheet" href="../css/CadastroPlantas.css">
+</head>
+<body onload="MostraPlantas()">
+
+<div id="container">
+
+        <menu>
+            <div class="conteudo_menu">
+                <h1 class="h1_cadastro">Aqui você pode cadastrar suas novas plantinhas</h1>
+        
+                <label>Digite o um nome para sua plantinha</label>
+                <input type="text" id="nomePlanta" placeholder="Nome da planta">
+            
+                <label>Digite o tamanho atual da sua planta em centimetros</label>
+                <input type="number" id="TamanhoPlanta" placeholder="Tamanho em centimetros">
+            
+                <label>Digite a quantidade de vezes que a planta é regada ao dia</label>
+                <input type="number" id="QntdRegar" placeholder="Quantas vezes você rega ao dia">
+            
+                <button class="button_cadastro" onclick="RecebePlantas()">Cadastrar</button>
+
+                <a href="./sobre.html">Sobre Nós</a><br>
+                <a href="./perfil.html">Voltar ao perfil</a>
+            </div>
+        </menu>
+        <div class="lista">
+            <h1 class="h1_lista">Plantas Cadastradas</h1>
+            <div class="fundo_lista">
+                <p id="plantasLista"></p>
+            </div>
+            <button  class="button_cadastro" onclick="EditarPlanta()">Editar uma planta</button>
+            <button  class="button_cadastro" onclick="ExcluirPlanta()">Excluir uma planta</button>
+        </div>
+</div>
+<script src="../js/script.js"></script>
+</body>
+
+</html>
